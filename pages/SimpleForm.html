@@ -54,28 +54,8 @@
             <button>submit</button>
         </div>
     </form>
-    <script>
-         
-         const text=document.querySelector('#text');//text is the id to be searched. if many ids then an array will be returned.
-         const textError=document.querySelector('.text-error');//test-error is the class to be searched. if many classes, then an array will be returned
-         text.addEventListener('input', function(){
-             let namRegex= new RegExp(/^[A-Z][a-z]{2,}$/);
-             if(namRegex.test(text.value))
-              textError.textContent="";
-              else
-              textError.textContent="Name is incorrect";
-         })
- 
- 
-         const salary=document.querySelector('#salary');
-         const output=document.querySelector('.salary-output');
-         output.textContent=salary.value;
-         salary.addEventListener('input',function(){
-             output.textContent=salary.value;
-         })
- 
- 
- 
+    <script src = '../Js/SimpleForm.js'>
+
     </script>
 </body>
 </html>
