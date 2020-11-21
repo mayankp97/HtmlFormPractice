@@ -19,8 +19,12 @@ else
 //UC2 : Validate Email
 const email = document.querySelector('#email');
 const emailError = document.querySelector('.email-error');
-email.addEventListener('input',() => textError.textContent = 
+email.addEventListener('input',() => emailError.textContent = 
                         new RegExp('^[A-Za-z0-9]+([._+-][A-Za-z0-9]+)*[@][A-Za-z0-9]+[.][a-zA-Z]{2,3}([.][a-zA-Z]{2,3})?$').test(email) ?
-                        '' : 'Email is Incorrect')
+                        '' : 'Email is Incorrect');
                         
 
+//UC3 : Validate Phone Number
+const phone = document.querySelector('#number');
+const phoneError = document.querySelector('.number-error');
+phone.addEventListener('input',() => phoneError.textContent = new RegExp('^[0-9]{2}[ ][1-9][0-9]{9}$').test(phone) ? '' : 'Phone Number is incorrect' );
