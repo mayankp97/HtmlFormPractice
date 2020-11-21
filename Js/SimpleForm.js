@@ -28,3 +28,8 @@ email.addEventListener('input',() => emailError.textContent =
 const phone = document.querySelector('#number');
 const phoneError = document.querySelector('.number-error');
 phone.addEventListener('input',() => phoneError.textContent = new RegExp('^[0-9]{2}[ ][1-9][0-9]{9}$').test(phone) ? '' : 'Phone Number is incorrect' );
+
+//UC4 : Validate Password
+const password = document.querySelector('#pwd');
+const passwordError = document.querySelector('.password-error');
+password.addEventListener('input', () => passwordError.textContent = new RegExp('^[a-z]{8,}$').test(password) ? '' : 'Password is Incorrect');
