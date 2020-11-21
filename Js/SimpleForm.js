@@ -32,4 +32,4 @@ phone.addEventListener('input',() => phoneError.textContent = new RegExp('^[0-9]
 //UC4 : Validate Password
 const password = document.querySelector('#pwd');
 const passwordError = document.querySelector('.password-error');
-password.addEventListener('input', () => passwordError.textContent = new RegExp('^[a-z]{8,}$').test(password) ? '' : 'Password is Incorrect');
+password.addEventListener('input', () => passwordError.textContent = new RegExp('^(?=.*[A-Z])(?=.*[0-9])(?=[A-Za-z0-9]*[-~!@#$%^&*()_+=`,.<>?/][A-Za-z0-9]*$).{8,}$').test(password) ? '' : 'Password is Incorrect');
